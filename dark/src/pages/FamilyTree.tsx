@@ -14,7 +14,7 @@ export function FamilyTree() {
     <div>
       <h1>Family Tree</h1>
       <GraphCanvas
-        layoutType="forceatlas2"
+        layoutType="forceDirected2d"
         nodes={nodes}
         edges={edges}
         selections={selections}
