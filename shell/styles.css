@@ -1,0 +1,5 @@
+body { margin: 0; font-family: system-ui, sans-serif; }
+header { position: fixed; top: 0; left: 0; right: 0; height: 48px; display: flex; gap: 8px; align-items: center; padding: 0 12px; background: #111; color: #fff; }
+header button { background: #222; color: #fff; border: 1px solid #444; padding: 6px 12px; cursor: pointer; font: inherit; }
+header button[aria-pressed="true"] { background: #4a90e2; border-color: #4a90e2; }
+#app-frame { position: absolute; top: 48px; left: 0; width: 100%; height: calc(100vh - 48px); border: 0; }
