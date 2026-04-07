@@ -26,4 +26,10 @@ mkdir -p shell-stubs/magazyn-patryka
 cp -R magazyn-patryka/build/. shell-stubs/magazyn-patryka/
 touch shell-stubs/magazyn-patryka/.gitkeep
 
+# assemble dist/
+rm -rf dist
+mkdir -p dist
+cp shell/index.html shell/main.js shell/styles.css dist/
+cp -R shell-stubs dist/shell-stubs
+
 echo "Built: dark, dog-tracker, magazyn-patryka"

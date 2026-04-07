@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function activate(app) {
     if (!valid.includes(app)) app = 'dark';
-    frame.src = `../shell-stubs/${app}/index.html`;
+    frame.src = `shell-stubs/${app}/index.html`;
     buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.app === app)));
     try { localStorage.setItem(STORAGE_KEY, app); } catch (e) {}
   }
