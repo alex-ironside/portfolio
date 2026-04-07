@@ -1,0 +1,6 @@
+[submodule "magazyn-patryka"]
+	path = magazyn-patryka
+	url = https://github.com/alex-ironside/magazyn-patryka.git
+[submodule "dog tracker"]
+	path = dog tracker
+	url = https://github.com/alex-ironside/dog-tracker.git
