@@ -10,7 +10,8 @@
       "WebFetch(domain:github.com)",
       "Bash(git filter-repo:*)",
       "Bash(python -m git_filter_repo --version)",
-      "WebFetch(domain:api.github.com)"
+      "WebFetch(domain:api.github.com)",
+      "Skill(gsd:add-phase)"
     ]
   }
 }
