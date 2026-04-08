@@ -17,9 +17,6 @@ concurrency:
 jobs:
   test-magazyn-unit:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: magazyn-patryka
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,13 +32,12 @@ jobs:
           cache: 'npm'
           cache-dependency-path: magazyn-patryka/package-lock.json
       - run: npm ci
+        working-directory: magazyn-patryka
       - run: npm test -- --watchAll=false --ci
+        working-directory: magazyn-patryka
 
   test-magazyn-e2e:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: magazyn-patryka
     steps:
       - uses: actions/checkout@v4
         with:
@@ -57,8 +53,11 @@ jobs:
           cache: 'npm'
           cache-dependency-path: magazyn-patryka/package-lock.json
       - run: npm ci
+        working-directory: magazyn-patryka
       - run: npx playwright install --with-deps chromium
+        working-directory: magazyn-patryka
       - run: npm run e2e
+        working-directory: magazyn-patryka
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
