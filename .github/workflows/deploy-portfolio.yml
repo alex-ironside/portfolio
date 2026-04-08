@@ -22,8 +22,13 @@ jobs:
         working-directory: magazyn-patryka
     steps:
       - uses: actions/checkout@v4
-      - name: Init magazyn-patryka submodule only
-        run: git submodule update --init -- magazyn-patryka
+        with:
+          path: portfolio
+      - name: Clone magazyn-patryka at pinned SHA
+        run: |
+          SHA=$(git -C portfolio ls-tree HEAD magazyn-patryka | awk '{print $3}')
+          git clone https://github.com/alex-ironside/magazyn-patryka.git magazyn-patryka
+          git -C magazyn-patryka checkout "$SHA"
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -39,8 +44,13 @@ jobs:
         working-directory: magazyn-patryka
     steps:
       - uses: actions/checkout@v4
-      - name: Init magazyn-patryka submodule only
-        run: git submodule update --init -- magazyn-patryka
+        with:
+          path: portfolio
+      - name: Clone magazyn-patryka at pinned SHA
+        run: |
+          SHA=$(git -C portfolio ls-tree HEAD magazyn-patryka | awk '{print $3}')
+          git clone https://github.com/alex-ironside/magazyn-patryka.git magazyn-patryka
+          git -C magazyn-patryka checkout "$SHA"
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
