@@ -22,8 +22,8 @@ jobs:
         working-directory: magazyn-patryka
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
+      - name: Init magazyn-patryka submodule only
+        run: git submodule update --init -- magazyn-patryka
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -39,8 +39,8 @@ jobs:
         working-directory: magazyn-patryka
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
+      - name: Init magazyn-patryka submodule only
+        run: git submodule update --init -- magazyn-patryka
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -62,6 +62,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          token: ${{ secrets.SUBMODULES_PAT }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
