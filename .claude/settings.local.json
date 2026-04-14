@@ -11,7 +11,17 @@
       "Bash(git filter-repo:*)",
       "Bash(python -m git_filter_repo --version)",
       "WebFetch(domain:api.github.com)",
-      "Skill(gsd:add-phase)"
+      "Skill(gsd:add-phase)",
+      "Skill(gsd-add-phase)",
+      "Skill(gsd-plan-phase)",
+      "Skill(gsd-execute-phase)",
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs roadmap update-plan-progress 07 07-01 completed)",
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs roadmap update-plan-progress 07 07-02 completed)",
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs roadmap update-plan-progress 07 07-03 completed)",
+      "Bash(npx vitest:*)",
+      "Skill(gsd-quick)",
+      "Skill(gsd-debug)",
+      "Skill(gsd-fast)"
     ]
   }
 }

@@ -3,7 +3,9 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-git submodule update --init --recursive
+if [ -z "${SKIP_SUBMODULE_UPDATE:-}" ]; then
+  git submodule update --init --recursive
+fi
 
 # dark
 (cd dark && npm install && npm run build)
@@ -20,7 +22,7 @@ cp -R "dog tracker/dist/." shell-stubs/dog-tracker/
 touch shell-stubs/dog-tracker/.gitkeep
 
 # magazyn-patryka
-(cd magazyn-patryka && npm install && PUBLIC_URL=/shell-stubs/magazyn-patryka npm run build)
+(cd magazyn-patryka && npm install --legacy-peer-deps && MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL='*' PUBLIC_URL=/shell-stubs/magazyn-patryka npm run build)
 rm -rf shell-stubs/magazyn-patryka
 mkdir -p shell-stubs/magazyn-patryka
 cp -R magazyn-patryka/build/. shell-stubs/magazyn-patryka/
