@@ -1,17 +1,7 @@
 import type { GraphEdge } from "reagraph";
 
-const getProxyUrl = (url: string) =>
-  `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-
 export const nodes = [
-  {
-    id: "jonas",
-    label: "Jonas Kahnwald",
-    icon: getProxyUrl(
-      "https://static.wikia.nocookie.net/dark-netflix/images/a/a6/Jonas_Kahnwald%E2%80%93Profile.png/revision/latest/scale-to-width-down/1200",
-    ),
-    size: 25,
-  },
+  { id: "jonas", label: "Jonas Kahnwald", size: 25 },
   { id: "hannah", label: "Hannah Kahnwald" },
   { id: "ulrich", label: "Ulrich Nielsen" },
   { id: "katharina", label: "Katharina Nielsen" },

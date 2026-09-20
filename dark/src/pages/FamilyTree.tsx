@@ -15,6 +15,7 @@ export function FamilyTree() {
       <h1>Family Tree</h1>
       <GraphCanvas
         layoutType="forceDirected2d"
+        labelType="nodes"
         nodes={nodes}
         edges={edges}
         selections={selections}
