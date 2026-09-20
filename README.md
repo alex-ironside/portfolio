@@ -1,25 +1,19 @@
-# Portfolio
+# Dark — character graph
 
-Static shell that switches between embedded apps via iframes.
+Interactive family-tree graph for the cast of Netflix's *Dark* (React 19 + reagraph).
 
-## Setup
+Live: https://dark.aleksander3wielki.workers.dev
 
-Initialize submodules:
-
-```
-git submodule update --init --recursive
-```
-
-## Run locally
+## Deploy
 
 ```
-npx serve .
+cd dark
+MSYS_NO_PATHCONV=1 npm run build -- --base=/
+npx wrangler deploy --assets=dist --name=dark --compatibility-date=2026-09-18
 ```
 
-Then open http://localhost:3000/shell/
+---
 
-## Structure
-
-- `shell/` — static shell (index.html, styles.css, main.js) with app switcher
-- `shell-stubs/` — local stub pages used by the switcher during development
-- `dog tracker/` — git submodule for the dog-tracker app
+This repo previously hosted an iframe-shell portfolio. That approach was retired:
+each project now deploys on its own, linked from the portfolio hub at
+https://alex-ironside.github.io/alex-ironside/

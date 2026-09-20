@@ -30,9 +30,3 @@ vendor/
 coverage/
 .cache/
 tmp/
-
-# ── portfolio app builds ──
-shell-stubs/dark/*
-!shell-stubs/dark/.gitkeep
-shell-stubs/dog-tracker/*
-!shell-stubs/dog-tracker/.gitkeep
