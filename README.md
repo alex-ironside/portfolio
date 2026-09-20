@@ -22,4 +22,4 @@ Then open http://localhost:3000/shell/
 
 - `shell/` — static shell (index.html, styles.css, main.js) with app switcher
 - `shell-stubs/` — local stub pages used by the switcher during development
-- `dog tracker/`, `magazyn-patryka/` — git submodules for the individual apps
+- `dog tracker/` — git submodule for the dog-tracker app

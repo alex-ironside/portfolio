@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const appUrls = {
     'dark': 'shell-stubs/dark/index.html',
     'dog-tracker': 'https://alex-ironside.github.io/dog-tracker/',
-    'magazyn-patryka': 'https://alex-ironside.github.io/magazyn-patryka/',
   };
   const valid = Object.keys(appUrls);
   const STORAGE_KEY = 'portfolio:lastApp';
